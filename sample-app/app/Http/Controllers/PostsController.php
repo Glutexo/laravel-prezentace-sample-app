@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Post;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
@@ -13,11 +14,10 @@ class PostsController extends Controller
      */
     public function index(Request $request): View
     {
-        $posts = [
-            'Laravel je bezva! ❤️',
-            'Jsme na Developer Day.',
-            'Vítejte v Havlíčkově Brodě.'
-        ];
+        $posts = Post::latest()->get();
+//        $posts = Post::oldest()->get();
+//        $posts = Post::inRandomOrder()->get();
+//        $posts = [Post::latest()->first()];
 
         return view('posts', compact('posts'));
     }

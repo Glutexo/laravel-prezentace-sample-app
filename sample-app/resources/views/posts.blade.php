@@ -78,7 +78,7 @@
 
                 <ul class="posts">
                     @foreach($posts as $post)
-                        <li>{{ $post }}</li>
+                        <li>{{ $post->message }}</li>
                     @endforeach
                 </ul>
             </div>
