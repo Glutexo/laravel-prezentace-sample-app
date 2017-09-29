@@ -11,6 +11,12 @@
 |
 */
 
-Route::get('/', function () {
+use Illuminate\View\View;
+
+Route::get('/', function (): View {
     return view('welcome');
 });
+
+Route::get('/hello/{what}', function (string $what): View {
+    return view('hello', compact('what'));
+})->name('hello');
