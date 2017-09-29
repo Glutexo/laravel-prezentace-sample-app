@@ -1,9 +1,9 @@
 @extends('layout')
 
 @section('content')
-    <div class="title m-b-md">
+    @component('title')
         Příspěvky
-    </div>
+    @endcomponent
 
     <ul class="posts">
         @foreach($posts as $post)

@@ -1,9 +1,9 @@
 @extends('layout')
 
 @section('content')
-    <div class="title m-b-md">
+    @component('title')
         {{ $post->message }}
-    </div>
+    @endcomponent
 
     <a class="link" href="{{ route('posts') }}">« Zpět</a>
 @endsection

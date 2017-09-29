@@ -1,9 +1,9 @@
 @extends('layout')
 
 @section('content')
-    <div class="title m-b-md">
+    @component('title')
         Laravel
-    </div>
+    @endcomponent
 
     <div class="links">
         <a href="{{ route('hello', 'world') }}">Hello</a>
