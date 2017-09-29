@@ -49,14 +49,8 @@
                 font-size: 84px;
             }
 
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
+            .posts {
+                text-align: left
             }
 
             .m-b-md {
@@ -79,13 +73,14 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Příspěvky
                 </div>
 
-                <div class="links">
-                    <a href="{{ route('hello', 'world') }}">Hello</a>
-                    <a href="{{ route('posts') }}">Posts</a>
-                </div>
+                <ul class="posts">
+                    @foreach($posts as $post)
+                        <li>{{ $post }}</li>
+                    @endforeach
+                </ul>
             </div>
         </div>
     </body>

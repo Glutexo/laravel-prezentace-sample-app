@@ -20,3 +20,5 @@ Route::get('/', function (): View {
 Route::get('/hello/{what}', function (string $what): View {
     return view('hello', compact('what'));
 })->name('hello');
+
+Route::get('/posts', 'PostsController@index')->name('posts');

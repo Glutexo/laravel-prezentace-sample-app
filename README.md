@@ -14,5 +14,13 @@ Ve složce s laravelí aplikací, v našem případě _sample-app_ máme po ru
 php artisan serve
 ```
 
+# Směrování #
+
+Třídu ovladače (Controller), stejně jako mnohé další, nám opět pomůže vytvořit [Artisan].
+
+```
+php artisan make:controller PostsController
+```
+
 [Composer]: https://www.getcomposer.org/
 [Artisan]: https://laravel.com/docs/5.5/artisan
