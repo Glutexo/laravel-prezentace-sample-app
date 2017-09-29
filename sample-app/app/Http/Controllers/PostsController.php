@@ -21,4 +21,14 @@ class PostsController extends Controller
 
         return view('posts', compact('posts'));
     }
+
+    /**
+     * @param Request $request
+     * @param Post $post
+     * @return View
+     */
+    public function show(Request $request, Post $post): View
+    {
+        return view('post', compact('post'));
+    }
 }

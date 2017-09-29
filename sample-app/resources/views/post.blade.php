@@ -49,16 +49,12 @@
                 font-size: 84px;
             }
 
-            .posts {
-                text-align: left
-            }
-
-            .posts a {
+            a {
                 color: inherit;
                 text-decoration: none;
             }
 
-            .posts a:hover {
+            a:hover {
                 text-decoration: underline;
             }
 
@@ -82,16 +78,10 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Příspěvky
+                    {{ $post->message }}
                 </div>
 
-                <ul class="posts">
-                    @foreach($posts as $post)
-                        <li>
-                            <a href="{{ route('post', $post) }}">{{ $post->message }}</a>
-                        </li>
-                    @endforeach
-                </ul>
+                <a href="{{ route('posts') }}">« Zpět</a>
             </div>
         </div>
     </body>

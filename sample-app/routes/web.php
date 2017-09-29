@@ -22,3 +22,4 @@ Route::get('/hello/{what}', function (string $what): View {
 })->name('hello');
 
 Route::get('/posts', 'PostsController@index')->name('posts');
+Route::get('/posts/{post}', 'PostsController@show')->name('post');
