@@ -71,9 +71,25 @@
             .posts a:hover, a.link:hover {
                 text-decoration: underline;
             }
+
+            ul.log {
+                position: fixed;
+                color: black;
+                list-style: none;
+                margin: 0;
+                padding: 0.5em;
+            }
         </style>
     </head>
     <body>
+        @if(session()->has('log'))
+            <ul class="log">
+                @foreach(session('log') as list($time, $route))
+                    <li>{{ is_null($route) ? '?' : $route }}, {{ $time->format('H:i:s') }}</li>
+                @endforeach
+            </ul>
+        @endif
+
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">

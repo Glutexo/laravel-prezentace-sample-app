@@ -14,7 +14,7 @@ Ve složce s laravelí aplikací, v našem případě _sample-app_ máme po ru
 $ php artisan serve
 ```
 
-# Směrování #
+## Směrování ##
 
 Třídu ovladače (Controller), stejně jako mnohé další, nám opět pomůže vytvořit [Artisan].
 
@@ -42,3 +42,11 @@ $ php artisan make:model Post
 [Composer]: https://www.getcomposer.org/
 [Artisan]: https://laravel.com/docs/5.5/artisan
 [Sqlite3]: https://sqlite.org/
+
+## Middleware ##
+
+Nový middleware nám připraví náš známý [Artisan].
+
+```
+$ php artisan make:middleware LoggerMiddleware
+```

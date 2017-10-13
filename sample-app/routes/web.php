@@ -15,7 +15,7 @@ use Illuminate\View\View;
 
 Route::get('/', function (): View {
     return view('welcome');
-});
+})->name('home');
 
 Route::get('/hello/{what}', function (string $what): View {
     return view('hello', compact('what'));
