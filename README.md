@@ -58,3 +58,11 @@ I o vytvoření e-mailové třídy se postará [Artisan].
 ```
 $ php artisan make:mail HelloWorld
 ```
+
+## Úlohy ##
+
+Založení nové úlohy je také úkolem [Artisanu][Artisan].
+
+```
+$ php artisan make:job SendMail
+```

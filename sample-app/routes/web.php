@@ -11,6 +11,7 @@
 |
 */
 
+use App\Jobs\SendMail;
 use App\Mail\HelloWorld;
 use Illuminate\View\View;
 
@@ -20,7 +21,7 @@ Route::get('/', function (): View {
 
 Route::get('/hello/{what}', function (string $what): View {
     $mail = new HelloWorld($what);
-    Mail::to('recipient@example.com')->send($mail);
+    SendMail::dispatch($mail);
 
     return view('hello', compact('what'));
 })->name('hello');
