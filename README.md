@@ -74,8 +74,17 @@ $ php artisan queue:table
 $ php artisan migrate
 ```
 
-Opět [Artisanem] se úlohy ve frontě spustí. Parametr `--once` způsobí, že se po vyprázdnění fronty zpracování zastaví. Bez něj zůstane proces běžet a bude zpracovávat nově přibyvší úlohy.
+Opět [Artisanem][Artisan] se úlohy ve frontě spustí. Parametr `--once` způsobí, že se po vyprázdnění fronty zpracování zastaví. Bez něj zůstane proces běžet a bude zpracovávat nově přibyvší úlohy.
 
 ```
 $ php artisan queue:work --once
 ```
+
+## Příkazy ##
+
+Do [Artisanu][Artisan] můžeme doplňovat i vlastní příkazy. Sám [Artisan] se postará o jejich vytvoření.
+
+```
+$ php artisan make:command Hello
+```
+
