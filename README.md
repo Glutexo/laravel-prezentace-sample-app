@@ -50,3 +50,11 @@ Nový middleware nám připraví náš známý [Artisan].
 ```
 $ php artisan make:middleware LoggerMiddleware
 ```
+
+## E-maily ##
+
+I o vytvoření e-mailové třídy se postará [Artisan].
+
+```
+$ php artisan make:mail HelloWorld
+```

@@ -11,6 +11,7 @@
 |
 */
 
+use App\Mail\HelloWorld;
 use Illuminate\View\View;
 
 Route::get('/', function (): View {
@@ -18,6 +19,9 @@ Route::get('/', function (): View {
 })->name('home');
 
 Route::get('/hello/{what}', function (string $what): View {
+    $mail = new HelloWorld($what);
+    Mail::to('recipient@example.com')->send($mail);
+
     return view('hello', compact('what'));
 })->name('hello');
 
