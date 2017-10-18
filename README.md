@@ -66,3 +66,16 @@ Založení nové úlohy je také úkolem [Artisanu][Artisan].
 ```
 $ php artisan make:job SendMail
 ```
+
+Při použití ovladače _database_ je nutné nejprve vytvořit datbázovou tabulku. [Artisan] obstará i to.
+
+```
+$ php artisan queue:table
+$ php artisan migrate
+```
+
+Opět [Artisanem] se úlohy ve frontě spustí. Parametr `--once` způsobí, že se po vyprázdnění fronty zpracování zastaví. Bez něj zůstane proces běžet a bude zpracovávat nově přibyvší úlohy.
+
+```
+$ php artisan queue:work --once
+```
