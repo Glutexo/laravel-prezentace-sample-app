@@ -44,6 +44,7 @@
         <body>
         <div class="flex-center position-ref full-height">
             <div class="title m-b-md">
+                <img src="{{ $message->embed(storage_path('app/mail/laravel.png')) }}" alt="Laravel">
                 Hello, {{ $what }}!
             </div>
         </div>

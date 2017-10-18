@@ -1,3 +1,5 @@
 *
+!mail/
+!mail/*
 !public/
 !.gitignore

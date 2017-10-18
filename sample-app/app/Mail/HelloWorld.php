@@ -34,6 +34,8 @@ class HelloWorld extends Mailable
      */
     public function build(): HelloWorld
     {
-        return $this->view('mails.hello');
+        return $this->view('mails.hello')
+            ->subject('Hello ' . $this->what)
+            ->attach(storage_path('app/mail/mapa.pdf'));
     }
 }
